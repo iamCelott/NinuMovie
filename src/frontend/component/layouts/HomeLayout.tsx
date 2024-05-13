@@ -5,7 +5,7 @@ type HomeLayoutProps = {
 };
 const HomeLayout = ({ children }: HomeLayoutProps) => {
   return (
-    <div className="px-3 sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
+    <div className="px-3 w-full sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
       {children}
     </div>
   );

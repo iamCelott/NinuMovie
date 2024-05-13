@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-color: rgba(255, 255, 255, 0.3) #1e1e1e;
+}
+
 body {
-    background-color: #1e1e1e;
+  background-color: #1e1e1e;
 }

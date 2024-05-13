@@ -1,9 +1,10 @@
 type InputProps = {
   type: "text" | "password" | "email" | "file" | "radio";
   className?: string;
+  name?: string;
 };
 
-const Input = ({ type, className }: InputProps) => {
+const Input = ({ type, className, name }: InputProps) => {
   let defaultClassname = `${className} px-3 py-1 outline-none `;
 
   if (type == "text" || type == "email" || type == "password") {
@@ -12,7 +13,7 @@ const Input = ({ type, className }: InputProps) => {
 
   return (
     <>
-      <input type={type} className={defaultClassname} />
+      <input type={type} className={defaultClassname} name={name} id={name} />
     </>
   );
 };
