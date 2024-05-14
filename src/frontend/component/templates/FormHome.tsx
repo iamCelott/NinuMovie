@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import Hero from "../fragments/Hero";
 import SearchBar from "../fragments/SearchBar";
 import MovieCard from "../fragments/MovieCard";
-import { Link } from "react-router-dom";
 const FormHome = () => {
+  const [apiKey, setApiKey] = useState("40b266d08d1a01ba16b344d2ac66546b");
   const [popularMovie, setPopularMovie] = useState([]);
   const [topRatedMovie, setTopRatedMovie] = useState([]);
 
   const getPopularMovie = async () => {
     try {
       const response = await fetch(
-        "https://api.themoviedb.org/3/discover/movie?api_key=40b266d08d1a01ba16b344d2ac66546b&sort_by=popularity.desc"
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&sort_by=popularity.desc`
       );
       const result = await response.json();
       setPopularMovie(result.results);
@@ -22,7 +22,7 @@ const FormHome = () => {
   const getTopRatedMovie = async () => {
     try {
       const response = await fetch(
-        "https://api.themoviedb.org/3/discover/movie?api_key=40b266d08d1a01ba16b344d2ac66546b&vote_count.gte=200"
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`
       );
       const result = await response.json();
       setTopRatedMovie(result.results);
@@ -56,7 +56,7 @@ const FormHome = () => {
         </div>
         <div className="text-white">
           <h1 className="text-2xl font-semibold pb-3 pt-7">
-            Recommendations:{" "}
+            Top Rated Movie:{" "}
           </h1>
           <div className="flex pb-1 gap-3 overflow-auto relative scrollbar-thin scrollbar-thumb-[rgba(255,255,255,0.3)] scrollbar-track-[#1e1e1e]">
             {topRatedMovie.map((movie: any, index: number) => (

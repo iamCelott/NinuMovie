@@ -9,3 +9,11 @@ html {
 body {
   background-color: #1e1e1e;
 }
+
+.hover-drop-shadow {
+  transition: 0.2s;
+}
+
+.hover-drop-shadow:hover {
+  filter: drop-shadow(2px 2px 10px lightblue);
+}

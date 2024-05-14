@@ -4,7 +4,7 @@ const Navbar = () => {
   const [checked, setChecked] = useState(false);
   return (
     <>
-      <header className="sticky top-0">
+      <header className="sticky top-0 z-50">
         <nav className="w-full h-12 bg-yellow-500 flex justify-between items-center text-white relative">
           <Link to="/">
             <h1 className="pl-10 text-xl font-bold hover:scale-110 duration-100">

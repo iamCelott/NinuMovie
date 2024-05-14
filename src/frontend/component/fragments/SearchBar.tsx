@@ -3,7 +3,7 @@ import Input from "../elements/Input";
 const SearchBar = () => {
   return (
     <>
-      <div className="flex flex-col sm:flex-row sm:items-center sm:py-20 pt-10 pb-5">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:pt-14 sm:pb-10 pt-7 pb-5">
         <label
           htmlFor="searchFilm"
           className="text-white font-semibold text-lg pr-5 text-nowrap"
