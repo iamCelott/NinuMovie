@@ -17,7 +17,7 @@ const MovieCard = ({
     <>
       <Link
         to={href}
-        className="w-1/3 md:w-1/4 lg:w-1/5 flex-shrink-0 rounded-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)]"
+        className="w-[31%] md:w-[23%] lg:w-[18%] flex-shrink-0 rounded-lg bg-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.2)]"
       >
         <div className="h-full p-2 flex flex-col justify-between">
           <div>
