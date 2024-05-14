@@ -1,17 +1,15 @@
 import Navbar from "../component/templates/Navbar";
 import AuthLayout from "../component/layouts/AuthLayout";
-import FormHome from "../component/templates/FormHome";
-import Footer from "../component/templates/Footer";
-const Home = () => {
+import FormAllMovies from "../component/templates/FormAllMovies";
+const AllMovies = () => {
   return (
     <>
       <Navbar />
       <AuthLayout>
-        <FormHome />
+        <FormAllMovies />
       </AuthLayout>
-      <Footer />
     </>
   );
 };
 
-export default Home;
+export default AllMovies;

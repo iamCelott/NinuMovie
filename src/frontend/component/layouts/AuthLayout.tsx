@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-type HomeLayoutProps = {
+type AuthLayoutProps = {
   children?: ReactNode;
 };
-const HomeLayout = ({ children }: HomeLayoutProps) => {
+const AuthLayout = ({ children }: AuthLayoutProps) => {
   return (
     <div className="px-3 w-full sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
       {children}
@@ -11,4 +11,4 @@ const HomeLayout = ({ children }: HomeLayoutProps) => {
   );
 };
 
-export default HomeLayout;
+export default AuthLayout;

@@ -6,13 +6,15 @@ const SearchBar = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:pt-14 sm:pb-10 pt-7 pb-5">
         <label
           htmlFor="searchFilm"
-          className="text-white font-semibold text-lg pr-5 text-nowrap"
+          className="text-white font-semibold text-lg pr-5 text-nowrap select-none"
         >
           Find the Movie:
         </label>
         <div className="w-full flex">
           <Input type="text" className="w-full h-10" name="searchFilm" />
-          <Button variant="dark">Search!</Button>
+          <Button variant="dark" className="select-none">
+            Search!
+          </Button>
         </div>
       </div>
     </>

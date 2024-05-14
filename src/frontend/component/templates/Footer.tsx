@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="w-full flex flex-col justify-between bg-[rgba(0,0,0,0.4)] mt-20 text-white">
+      <div className="w-full flex flex-col justify-between bg-[rgba(0,0,0,0.4)] mt-20 text-white select-none">
         <div className="flex flex-col items-center py-2 text-xs">
           <h1 className="font-semibold flex">
             Created by:{" "}

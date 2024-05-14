@@ -39,12 +39,12 @@ const FormHome = () => {
       <div className="w-full">
         <Hero />
         <SearchBar />
-        <div className="text-white">
+        <div className="text-white select-none">
           <h1 className="text-2xl font-semibold pb-3">Popular Movies: </h1>
           <div className="flex pb-1 gap-3 overflow-auto relative scrollbar-thin scrollbar-thumb-[rgba(255,255,255,0.3)] scrollbar-track-[#1e1e1e]">
             {popularMovie.map((movie: any, index: number) => (
               <MovieCard
-                href={`/${movie.title}`}
+                href={`/${movie.id}/${movie.title}`}
                 key={index}
                 img={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 release_date={movie.release_date}
@@ -54,14 +54,14 @@ const FormHome = () => {
             ))}
           </div>
         </div>
-        <div className="text-white">
+        <div className="text-white select-none">
           <h1 className="text-2xl font-semibold pb-3 pt-7">
             Top Rated Movie:{" "}
           </h1>
           <div className="flex pb-1 gap-3 overflow-auto relative scrollbar-thin scrollbar-thumb-[rgba(255,255,255,0.3)] scrollbar-track-[#1e1e1e]">
             {topRatedMovie.map((movie: any, index: number) => (
               <MovieCard
-                href={`/${movie.title}`}
+                href={`/${movie.id}/${movie.title}`}
                 key={index}
                 img={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 release_date={movie.release_date}
