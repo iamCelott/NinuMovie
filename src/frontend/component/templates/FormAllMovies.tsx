@@ -48,12 +48,9 @@ const FormAllMovies = () => {
               id=""
               onChange={handleChange}
               className="w-40 h-10 font-semibold rounded-t-lg bg-[#1e1e1e] px-2 border-[2px] border-[rgba(255,255,255,0.2)] outline-none "
+              defaultValue="Popular"
             >
-              <option
-                selected
-                value="Popular"
-                className="bg-[#1e1e1e] font-semibold"
-              >
+              <option value="Popular" className="bg-[#1e1e1e] font-semibold">
                 Popular
               </option>
               <option value="Top Rated" className="bg-[#1e1e1e] font-semibold">
@@ -83,7 +80,7 @@ const FormAllMovies = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-center items-center gap-3 py-10">
+        <div className="flex justify-center items-center gap-5 py-10">
           <Button
             variant="secondary"
             className="rounded-full"

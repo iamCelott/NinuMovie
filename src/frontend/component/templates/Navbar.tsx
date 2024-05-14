@@ -18,7 +18,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="categories" className="hover:text-slate-200">
+              <Link to="/categories" className="hover:text-slate-200">
                 Categories
               </Link>
             </li>

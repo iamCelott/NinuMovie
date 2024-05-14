@@ -1,10 +1,11 @@
 type InputProps = {
-  type: "text" | "password" | "email" | "file" | "radio";
+  type: "text" | "password" | "email" | "file" | "radio" | "checkbox";
   className?: string;
   name?: string;
+  onChange?: any;
 };
 
-const Input = ({ type, className, name }: InputProps) => {
+const Input = ({ type, className, name, onChange }: InputProps) => {
   let defaultClassname = `${className} px-3 py-1 outline-none `;
 
   if (type == "text" || type == "email" || type == "password") {
@@ -13,7 +14,13 @@ const Input = ({ type, className, name }: InputProps) => {
 
   return (
     <>
-      <input type={type} className={defaultClassname} name={name} id={name} />
+      <input
+        type={type}
+        onChange={onChange}
+        className={defaultClassname}
+        name={name}
+        id={name}
+      />
     </>
   );
 };
