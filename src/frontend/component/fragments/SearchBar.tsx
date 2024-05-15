@@ -22,7 +22,11 @@ const SearchBar = () => {
             onChange={(e: any) => setInputQuery(e.target.value)}
           />
           <Link to={`/searchmovie/${inputQuery}`}>
-            <Button variant="dark" className="select-none">
+            <Button
+              variant="dark"
+              className="select-none"
+              disabled={!inputQuery}
+            >
               Search!
             </Button>
           </Link>
