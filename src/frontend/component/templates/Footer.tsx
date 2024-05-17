@@ -10,12 +10,12 @@ const Footer = () => {
             </span>
             Using:
             <img
-              src="/public/svg/React-icon.svg"
+              src="/svg/React-icon.svg"
               className="w-4 animate-spin ml-1"
               alt=""
             />
             <img
-              src="/public/svg/tailwind-svgrepo-com.svg"
+              src="/svg/tailwind-svgrepo-com.svg"
               className="w-4 ml-1"
               alt=""
             />
@@ -25,7 +25,7 @@ const Footer = () => {
           <a href="https://github.com/iamCelott" target="_blank">
             {" "}
             <img
-              src="/public/svg/GitHub_Invertocat_Logo.svg"
+              src="/svg/GitHub_Invertocat_Logo.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
@@ -33,7 +33,7 @@ const Footer = () => {
           <a href="https://www.instagram.com/dcviriya/?hl=id" target="_blank">
             {" "}
             <img
-              src="/public/svg/Instagram_logo_2022.svg"
+              src="/svg/Instagram_logo_2022.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
@@ -44,7 +44,7 @@ const Footer = () => {
           >
             {" "}
             <img
-              src="/public/svg/linkedin-svgrepo-com.svg"
+              src="/svg/linkedin-svgrepo-com.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
@@ -52,7 +52,7 @@ const Footer = () => {
           <a href="http://t.me/iamCelott" target="_blank">
             {" "}
             <img
-              src="/public/svg/Telegram_2019_Logo.svg"
+              src="/svg/Telegram_2019_Logo.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
