@@ -24,7 +24,7 @@ const FormSingleMoviePage = () => {
   }, [id]);
   return (
     <>
-      <div className="w-full text-white">
+      <div className="w-full text-white md:pb-60">
         <div className="flex px-5 sm:px-0 pt-12 items-center gap-5">
           <Button
             onClick={() => window.history.back()}
@@ -45,9 +45,11 @@ const FormSingleMoviePage = () => {
             <h1 className="font-bold text-lg md:text-lg lg:text-3xl">
               {data.title}
             </h1>
-            <span className="opacity-65 lg:text-lg md:pt-1 lg:pt-2">{data.tagline}</span>
+            <p className="opacity-65 text-center md:text-left lg:text-lg md:pt-1 lg:pt-2">
+              {data.tagline}
+            </p>
 
-            <div className="flex gap-3 text-sm md:text-sm md:gap-5 lg:text-lg">
+            <div className="flex gap-3 text-sm md:text-sm md:gap-5 lg:text-lg pt-2">
               <span className="font-semibold">• {data.status}</span>
               <span className="font-normal">
                 <span className="font-semibold">
@@ -74,13 +76,14 @@ const FormSingleMoviePage = () => {
                   data.genres.map((genre: any, index: number) => (
                     <li
                       key={index}
-                      className="text-xs bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] py-2 rounded-lg text-center w-1/3 sm:text-sm md:w-2/5 lg:text-lg font-semibold flex-shrink-0"
+                      className="text-xs bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] py-2 rounded-lg text-center w-1/3 sm:text-sm md:w-2/5 lg:text-lg font-semibold "
                     >
                       {genre.name}
                     </li>
                   ))}
               </ul>
             </div>
+
             <div className="w-3/4 mx-auto md:mx-0 md:w-full pb-3">
               <h1 className="font-bold text-lg lg:text-xl">Overview: </h1>
               <p className="lg:text-lg lg:tracking-wide">
@@ -95,6 +98,32 @@ const FormSingleMoviePage = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="w-3/4 mx-auto md:mx-0 py-2">
+          <h1 className="font-bold text-lg lg:text-xl pb-1">
+            Production Companies:{" "}
+          </h1>
+
+          <ul className="flex flex-col md:flex-row gap-3">
+            {data.production_companies &&
+              data.production_companies.map(
+                (production_companies: any, index: number) => (
+                  <li
+                    key={index}
+                    className="gap-3 bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] p-2 rounded-lg w-full flex flex-col justify-center items-center"
+                  >
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${production_companies.logo_path}`}
+                      className="h-[33px] text-nowrap"
+                      alt={production_companies.name}
+                    />
+                    <h1 className="hidden sm:inline-block font-semibold text-nowrap">
+                      {production_companies.name}
+                    </h1>
+                  </li>
+                )
+              )}
+          </ul>
         </div>
       </div>
     </>
