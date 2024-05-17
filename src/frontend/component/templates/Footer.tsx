@@ -10,46 +10,49 @@ const Footer = () => {
             </span>
             Using:
             <img
-              src="/src/assets/svg/React-icon.svg"
+              src="/public/svg/React-icon.svg"
               className="w-4 animate-spin ml-1"
               alt=""
             />
             <img
-              src="/src/assets/svg/tailwind-svgrepo-com.svg"
+              src="/public/svg/tailwind-svgrepo-com.svg"
               className="w-4 ml-1"
               alt=""
             />
           </h1>
         </div>
         <div className="flex gap-5 justify-center py-3 bg-[rgba(0,0,0,0.5)]">
-          <a href="">
+          <a href="https://github.com/iamCelott" target="_blank">
             {" "}
             <img
-              src="/src/assets/svg/GitHub_Invertocat_Logo.svg"
+              src="/public/svg/GitHub_Invertocat_Logo.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/dcviriya/?hl=id" target="_blank">
             {" "}
             <img
-              src="/src/assets/svg/Instagram_logo_2022.svg"
+              src="/public/svg/Instagram_logo_2022.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
           </a>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/dharma-chandra-viriya-286497305/"
+            target="_blank"
+          >
             {" "}
             <img
-              src="/src/assets/svg/linkedin-svgrepo-com.svg"
+              src="/public/svg/linkedin-svgrepo-com.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
           </a>
-          <a href="">
+          <a href="http://t.me/iamCelott" target="_blank">
             {" "}
             <img
-              src="/src/assets/svg/Telegram_2019_Logo.svg"
+              src="/public/svg/Telegram_2019_Logo.svg"
               className="w-9 hover-drop-shadow"
               alt=""
             />
