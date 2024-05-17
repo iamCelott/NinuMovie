@@ -110,7 +110,7 @@ const FormSingleMoviePage = () => {
                 (production_companies: any, index: number) => (
                   <li
                     key={index}
-                    className="gap-3 bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] p-2 rounded-lg w-[32%]"
+                    className="gap-3 bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] p-2 rounded-lg w-full md:w-[32%]"
                   >
                     <img
                       src={`https://image.tmdb.org/t/p/w500${production_companies.logo_path}`}
