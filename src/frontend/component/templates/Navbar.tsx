@@ -18,8 +18,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/categories" className="hover:text-slate-200">
-                Categories
+              <Link to="/genres" className="hover:text-slate-200">
+                Genres
               </Link>
             </li>
             <li>

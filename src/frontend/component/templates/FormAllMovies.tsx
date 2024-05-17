@@ -3,7 +3,7 @@ import Button from "../elements/Button";
 import MovieCard from "../fragments/MovieCard";
 import SearchBar from "../fragments/SearchBar";
 const FormAllMovies = () => {
-  const [apiKey, setApiKey] = useState("40b266d08d1a01ba16b344d2ac66546b");
+  const apiKey: string = "40b266d08d1a01ba16b344d2ac66546b";
   const [data, setData] = useState([]);
   const [sortBy, setSortBy] = useState("Popular");
   const [page, setPage] = useState(1);

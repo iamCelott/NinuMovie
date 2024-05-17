@@ -3,8 +3,8 @@ import Input from "../elements/Input";
 import MovieCard from "../fragments/MovieCard";
 import SearchBar from "../fragments/SearchBar";
 import Button from "../elements/Button";
-const FormCategories = () => {
-  const [apiKey, setApiKey] = useState("40b266d08d1a01ba16b344d2ac66546b");
+const FormGenres = () => {
+  const apiKey: string = "40b266d08d1a01ba16b344d2ac66546b";
   const [genresData, setGenresData] = useState([]);
   const [movieByGenres, setMovieByGenres] = useState([]);
   const [genreClicked, setGenreClicked] = useState(new Set());
@@ -120,4 +120,4 @@ const FormCategories = () => {
   );
 };
 
-export default FormCategories;
+export default FormGenres;

@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import MovieCard from "../fragments/MovieCard";
 import Button from "../elements/Button";
 const FormSearchMovie = () => {
-  const [apiKey, setApiKey] = useState("40b266d08d1a01ba16b344d2ac66546b");
+  const apiKey: string = "40b266d08d1a01ba16b344d2ac66546b";
   const [data, setData] = useState([]);
   const { name } = useParams();
   const [page, setPage] = useState(1);

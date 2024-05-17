@@ -2,7 +2,7 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import AllMovies from "./pages/allmovies";
-import Categories from "./pages/categories";
+import Genres from "./pages/genres";
 import SearchMovie from "./pages/searchmovie";
 import SingleMoviePage from "./pages/singlemoviepage";
 const router = createBrowserRouter([
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <AllMovies />,
   },
   {
-    path: "/categories",
-    element: <Categories />,
+    path: "/genres",
+    element: <Genres />,
   },
   {
     path: "/searchmovie/:name",

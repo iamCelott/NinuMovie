@@ -11,7 +11,8 @@ type buttonProps = {
     | "danger"
     | "warning"
     | "light"
-    | "dark";
+    | "dark"
+    | "transparent";
   className?: string;
 };
 
@@ -32,6 +33,8 @@ const Button = (props: buttonProps) => {
     buttonClassname += "bg-white hover:bg-gray-200 text-black";
   } else if (props.variant === "dark") {
     buttonClassname += "bg-gray-700 hover:bg-gray-600 text-white";
+  } else if (props.variant === "transparent") {
+    buttonClassname += "bg-transparent hover:bg-gray-600 text-white";
   }
 
   return (

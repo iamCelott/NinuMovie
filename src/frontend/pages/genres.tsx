@@ -1,17 +1,17 @@
 import Navbar from "../component/templates/Navbar";
 import AuthLayout from "../component/layouts/AuthLayout";
-import FormCategories from "../component/templates/FormCategories";
+import FormGenres from "../component/templates/FormGenres";
 import Footer from "../component/templates/Footer";
-const Categories = () => {
+const Genres = () => {
   return (
     <>
       <Navbar />
       <AuthLayout>
-        <FormCategories />
+        <FormGenres />
       </AuthLayout>
       <Footer />
     </>
   );
 };
 
-export default Categories;
+export default Genres;
