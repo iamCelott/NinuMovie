@@ -104,20 +104,20 @@ const FormSingleMoviePage = () => {
             Production Companies:{" "}
           </h1>
 
-          <ul className="flex flex-col md:flex-row gap-3">
+          <ul className="flex flex-col w-[872px] md:flex-row gap-3">
             {data.production_companies &&
               data.production_companies.map(
                 (production_companies: any, index: number) => (
                   <li
                     key={index}
-                    className="gap-3 bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] p-2 rounded-lg w-full flex flex-col justify-center items-center"
+                    className="gap-3 bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] p-2 rounded-lg w-full"
                   >
                     <img
                       src={`https://image.tmdb.org/t/p/w500${production_companies.logo_path}`}
                       className="h-[33px] text-nowrap"
                       alt={production_companies.name}
                     />
-                    <h1 className="hidden sm:inline-block font-semibold text-nowrap">
+                    <h1 className="hidden sm:inline-block font-semibold text-nowrap pt-2">
                       {production_companies.name}
                     </h1>
                   </li>
