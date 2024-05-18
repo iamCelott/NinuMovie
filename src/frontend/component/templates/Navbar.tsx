@@ -9,8 +9,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50">
-        <nav className="w-full h-12 bg-yellow-500 flex justify-between items-center text-white relative">
+      <header className="sticky z-50 top-0">
+        <nav className="w-full z-50 h-12 bg-yellow-500 flex justify-between items-center text-white relative">
           <Link to="/">
             <h1 className="pl-10 text-xl font-bold hover:scale-110 duration-100">
               NinuMovie
@@ -64,33 +64,33 @@ const Navbar = () => {
             ></div>
           </div>
         </nav>
+        <div
+          className={`w-full ${
+            checked == false ? "-top-36" : "top-12"
+          } absolute backdrop-blur-lg bg-[rgba(255,255,255,0.1)] duration-300 z-40`}
+        >
+          <ul className="flex flex-col items-center">
+            <Link to="/">
+              <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+                Home
+              </li>
+            </Link>
+            <Link to="/genres">
+              <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+                Genres
+              </li>
+            </Link>
+            <Link
+              to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzCpVPbwjXXhGrvWnGrMBMrWhcWWvWVfLVTQrZXLzCvGnvdcPTHCzLKqMGHNLKSlvTBhQjx"
+              target="_blank"
+            >
+              <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+                Get in Touch
+              </li>
+            </Link>
+          </ul>
+        </div>
       </header>
-      <div
-        className={`w-full ${
-          checked == false ? "-top-32" : "top-12"
-        } absolute backdrop-blur-lg bg-[rgba(255,255,255,0.1)] duration-300`}
-      >
-        <ul className="flex flex-col items-center">
-          <Link to="/">
-            <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
-              Home
-            </li>
-          </Link>
-          <Link to="/genres">
-            <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
-              Genres
-            </li>
-          </Link>
-          <Link
-            to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzCpVPbwjXXhGrvWnGrMBMrWhcWWvWVfLVTQrZXLzCvGnvdcPTHCzLKqMGHNLKSlvTBhQjx"
-            target="_blank"
-          >
-            <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
-              Get in Touch
-            </li>
-          </Link>
-        </ul>
-      </div>
     </>
   );
 };
