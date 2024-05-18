@@ -52,6 +52,8 @@ const FormGenres = () => {
     getMovieByGenres();
   };
 
+  const roundToOneDecimal = (num: number) => Math.round(num * 10) / 10;
+
   useEffect(() => {
     getGenresApi();
     getMovieByGenres();
@@ -90,7 +92,11 @@ const FormGenres = () => {
               img={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               release_date={movie.release_date}
               title={movie.title}
-              vote_average={movie.vote_average.toFixed(1)}
+              vote_average={
+                typeof movie.vote_average === "number"
+                  ? roundToOneDecimal(movie.vote_average)
+                  : ""
+              }
             />
           ))}
         </div>

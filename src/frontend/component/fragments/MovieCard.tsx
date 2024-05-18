@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 type MovieCardProps = {
   title: string;
   release_date: string;
-  vote_average: string;
+  vote_average: string | number;
   img: string;
   href: string;
 };
