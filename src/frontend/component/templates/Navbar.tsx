@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
   const [checked, setChecked] = useState(false);
+
+  const handleOnChange = () => {
+    setChecked((prev) => !prev);
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50">
@@ -39,7 +44,7 @@ const Navbar = () => {
           >
             <input
               type="checkbox"
-              onChange={() => setChecked((prev) => !prev)}
+              onChange={handleOnChange}
               className="absolute w-5 h-5 opacity-0 z-20"
             />
             <div
@@ -60,6 +65,32 @@ const Navbar = () => {
           </div>
         </nav>
       </header>
+      <div
+        className={`w-full ${
+          checked == false ? "-top-32" : "top-12"
+        } absolute backdrop-blur-lg bg-[rgba(255,255,255,0.1)] duration-300`}
+      >
+        <ul className="flex flex-col items-center">
+          <Link to="/">
+            <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+              Home
+            </li>
+          </Link>
+          <Link to="/genres">
+            <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+              Genres
+            </li>
+          </Link>
+          <Link
+            to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzCpVPbwjXXhGrvWnGrMBMrWhcWWvWVfLVTQrZXLzCvGnvdcPTHCzLKqMGHNLKSlvTBhQjx"
+            target="_blank"
+          >
+            <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+              Get in Touch
+            </li>
+          </Link>
+        </ul>
+      </div>
     </>
   );
 };
