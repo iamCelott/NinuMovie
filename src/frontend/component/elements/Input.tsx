@@ -3,9 +3,10 @@ type InputProps = {
   className?: string;
   name?: string;
   onChange?: any;
+  onKeyDown?: any;
 };
 
-const Input = ({ type, className, name, onChange }: InputProps) => {
+const Input = ({ type, className, name, onChange, onKeyDown }: InputProps) => {
   let defaultClassname = `${className} px-3 py-1 outline-none `;
 
   if (type == "text" || type == "email" || type == "password") {
@@ -20,6 +21,7 @@ const Input = ({ type, className, name, onChange }: InputProps) => {
         className={defaultClassname}
         name={name}
         id={name}
+        onKeyDown={onKeyDown}
       />
     </>
   );

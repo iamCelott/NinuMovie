@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   const [inputQuery, setInputQuery] = useState("");
+  const handleKeyDown = (e: any) => {
+    if (e.key == "Enter") {
+      window.location.pathname = `/searchmovie/${inputQuery}`;
+    }
+  };
   return (
     <>
       <div className="flex flex-col sm:flex-row sm:items-center sm:pt-14 sm:pb-10 pt-7 pb-5">
@@ -20,6 +25,7 @@ const SearchBar = () => {
             className="w-full h-10 text-black"
             name="searchFilm"
             onChange={(e: any) => setInputQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
           <Link to={`/searchmovie/${inputQuery}`}>
             <Button
