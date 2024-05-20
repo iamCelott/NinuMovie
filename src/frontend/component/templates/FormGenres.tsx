@@ -3,7 +3,10 @@ import Input from "../elements/Input";
 import MovieCard from "../fragments/MovieCard";
 import SearchBar from "../fragments/SearchBar";
 import Button from "../elements/Button";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 const FormGenres = () => {
+  const { urlid, name } = useParams();
   const apiKey: string = "40b266d08d1a01ba16b344d2ac66546b";
   const [genresData, setGenresData] = useState([]);
   const [movieByGenres, setMovieByGenres] = useState([]);
@@ -36,6 +39,18 @@ const FormGenres = () => {
     }
   };
 
+  const getMovieByIdGenres = async () => {
+    try {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${urlid}`
+      );
+      const result = await response.json();
+      setMovieByGenres(result.results);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   const handleChange = (id: number) => {
     setGenreClicked((prev) => {
       const newGenreClicked = new Set(prev);
@@ -56,12 +71,25 @@ const FormGenres = () => {
 
   useEffect(() => {
     getGenresApi();
-    getMovieByGenres();
-  }, [page]);
+
+    if (urlid == null) {
+      getMovieByGenres();
+    } else {
+      getMovieByIdGenres();
+    }
+  }, [page, urlid]);
   return (
     <>
       <div className="w-full text-white">
         <SearchBar />
+        {urlid != null ? (
+          <>
+            {" "}
+            <h1 className="text-4xl font-bold py-5">Result by Genre: {name}</h1>
+          </>
+        ) : (
+          <></>
+        )}
         <ul className="w-full flex flex-wrap gap-3 justify-evenly">
           {genresData.map((item: any, index: number) => (
             <li
@@ -76,13 +104,15 @@ const FormGenres = () => {
               <span className="text-nowrap">{item.name}</span>
             </li>
           ))}
-          <Button
-            variant="primary"
-            className="rounded-lg"
-            onClick={handleClick}
-          >
-            Find Movie {">  "}
-          </Button>
+          <Link to="/genres">
+            <Button
+              variant="primary"
+              className="rounded-lg"
+              onClick={handleClick}
+            >
+              Find Movie {">  "}
+            </Button>
+          </Link>
         </ul>
         <div className="flex justify-center mt-5 gap-3 relative flex-wrap">
           {movieByGenres.map((movie: any, index: number) => (

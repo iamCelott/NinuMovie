@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     element: <Genres />,
   },
   {
+    path: "/genres/:urlid/:name",
+    element: <Genres />,
+  },
+  {
     path: "/searchmovie/:name",
     element: <SearchMovie />,
   },

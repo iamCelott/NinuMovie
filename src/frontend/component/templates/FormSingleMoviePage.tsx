@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Button from "../elements/Button";
 const FormSingleMoviePage = () => {
   const apiKey: string = "40b266d08d1a01ba16b344d2ac66546b";
@@ -74,12 +74,13 @@ const FormSingleMoviePage = () => {
               <ul className="flex gap-3">
                 {data.genres &&
                   data.genres.map((genre: any, index: number) => (
-                    <li
+                    <Link
+                      to={`/genres/${genre.id}/${genre.name}`}
                       key={index}
                       className="text-xs bg-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.3)] py-2 rounded-lg text-center w-1/3 sm:text-sm md:w-2/5 lg:text-lg font-semibold "
                     >
-                      {genre.name}
-                    </li>
+                      <li>{genre.name}</li>
+                    </Link>
                   ))}
               </ul>
             </div>
