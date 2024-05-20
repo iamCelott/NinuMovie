@@ -71,12 +71,12 @@ const Navbar = () => {
         >
           <ul className="flex flex-col items-center">
             <Link to="/">
-              <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+              <li className="py-3 text-white font-semibold hover:text-slate-300 w-full text-center">
                 Home
               </li>
             </Link>
             <Link to="/genres">
-              <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+              <li className="py-3 text-white font-semibold hover:text-slate-300 w-full text-center">
                 Genres
               </li>
             </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
               to="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzCpVPbwjXXhGrvWnGrMBMrWhcWWvWVfLVTQrZXLzCvGnvdcPTHCzLKqMGHNLKSlvTBhQjx"
               target="_blank"
             >
-              <li className="py-3 text-white font-semibold hover:text-slate-300 cursor-pointer w-full text-center">
+              <li className="py-3 text-white font-semibold hover:text-slate-300 w-full text-center">
                 Get in Touch
               </li>
             </Link>

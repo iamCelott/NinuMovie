@@ -80,7 +80,7 @@ const FormGenres = () => {
   }, [page, urlid]);
   return (
     <>
-      <div className="w-full text-white">
+      <div className="w-full text-white ">
         <SearchBar />
         {urlid != null ? (
           <>
